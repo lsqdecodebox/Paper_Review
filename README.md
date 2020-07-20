@@ -1,12 +1,32 @@
 # Paper_Review
 
+##### 符号表
+
+@ 	20%熟悉度 （大体内容方向）
+
+@@ 	  40%熟悉度 （摘要、标题、关键词）
+
+@@@		60%熟悉度 （导言、结论以及图表）
+
+@@@@ 		80%熟悉度 （全篇、数学公式、技术术语）
+
+@@@@@		100%熟悉度（代码细节、应用）
+
+------
 
 
-### 关于类别不平衡问题：
 
 
 
-#### focal loss
+
+
+------
+
+#### 关于类别不平衡问题：
+
+##### focal loss
+
+@@@
 
 https://zhuanlan.zhihu.com/p/49981234
 
@@ -34,9 +54,9 @@ OHEM（online hard example mining），实现了在线学习的类别平衡方�
 
 
 
-#### Dice Loss for Data-imbalanced NLP Tasks
+##### Dice Loss for Data-imbalanced NLP Tasks
 
-来自香侬科技的一篇，还未开源，网友怀疑效果，不过值得试一试
+@@@       来自香侬科技的一篇，还未开源，网友怀疑效果，不过值得试一试
 
 https://arxiv.org/pdf/1911.02855.pdf
 
@@ -60,6 +80,9 @@ Dice系数是一种集合相似度度量函数，通常用于计算两个样本�
 
 
 
+##### Long-tail learning via logit adjustment
+
+@@  苏剑林推荐   互信息思想解决类别不平衡问题  https://kexue.fm/archives/7615
 
 
 
@@ -67,8 +90,43 @@ Dice系数是一种集合相似度度量函数，通常用于计算两个样本�
 
 
 
+------
 
-#### TODO
+#### 神经网络架构问题：
+
+##### Graph Structure of Neural Networks 
+
+@@		何恺明团队解构神经网络
+
+ https://arxiv.org/abs/2007.06559
+
+解构为神经网络原子神经元的拓扑结构
+
+ average path length measures the average shortest path distance between any pair of nodes
+
+clustering coefficient measures the proportion of edges between the nodes within a given node’s neighborhood, divided by the number of edges that could possibly exist between them, averaged over all the nodes
+
+两个参数下会有较优点。
+
+
+
+##### 关于attention中的softmax运算复杂度 的优化
+
+https://arxiv.org/abs/2006.16236  Transformers are RNNs: Fast Autoregressive Transformers with Linear Attention  @@@
+
+[https://kexue.fm/archives/7546#%E4%B8%80%E8%88%AC%E7%9A%84%E5%AE%9A%E4%B9%89](https://kexue.fm/archives/7546#一般的定义)
+
+如果直接去掉Softmax，问题是内积无法保证非负性
+
+博文提出三种方法： 泰勒展开、QK分别softmax、核方法
+
+论文中的linear attention 最后效果和原始的相当
+
+苏介绍得好丰富详细呀，相关的reformer 、linformer
+
+
+
+#### 编码
 
 BBPE
 
@@ -76,11 +134,50 @@ https://zhuanlan.zhihu.com/p/146114164
 
 
 
-模型蒸馏
+#### 模型蒸馏
 
 https://zhuanlan.zhihu.com/p/124215760
 
  
 
+#### 文本摘要
+
+##### PEGASUS: Pre-training with Extracted Gap-sentences for Abstractive Summarization
+
+@@
+
+*https://arxiv.org/pdf/1912.08777.pdf*
+
+新的自监督预训练目标：GSG(Gap Sentences Generation)
+
+少量训练，优秀的结果
 
 
+
+
+
+#### 文本对抗 & 模型有效性 & benchmark
+
+##### Probing Neural Network Comprehension of Natural Language Arguments
+
+@@@  https://arxiv.org/pdf/1907.07355.pdf
+
+在Argument Reasoning Comprehension Task上分析模型做判断的线索
+
+取逆否命题（颠倒数据） 77分降到53分
+
+
+
+##### Keeping up with the BERTs: a review of the main NLP benchmarks
+
+@@@   https://creatext.ai/blog-posts/nlp-benchmarking-superglue-xtreme
+
+对NLP任务进行了分类：
+
+单句任务、双句相似任务和推理任务（包括逻辑问题 (例如判断两个论点是否矛盾) ，即问答题和阅读理解题，）
+
+GLUE的一个重要优点是，它提供了一个人类基准
+
+结果表明，berts在推理判断型任务上会低于人类基准1-5百分点（逻辑、因果推理）
+
+提出 SuperGLUE 、XTREME（multilingual）
