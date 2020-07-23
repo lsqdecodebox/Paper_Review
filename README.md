@@ -126,6 +126,54 @@ https://arxiv.org/abs/2006.16236  Transformers are RNNs: Fast Autoregressive Tra
 
 
 
+##### 博文：The Illustrated Transformer
+
+@@   详细阐释了transformer，可以关注位置向量编码的源码
+
+https://jalammar.github.io/illustrated-transformer/
+
+
+
+#### bert在语义相似度搜索的应用：
+
+##### Sentence-BERT
+
+@@@  
+
+https://www.aclweb.org/anthology/D19-1410.pdf   https://www.codenong.com/cs106313990/   https://cloud.tencent.com/developer/article/1629591
+
+孪生网络三种后接方式：
+
+1、直接使用距离公式，cosine距离、欧式距离等得到两个文本的相似度
+
+2、加MLP层，学习文本关系函数的映射，
+
+3、 Triplet network
+
+bert的句子输出向量三种方式：
+
+1. cls token
+2. avg pooling 
+3. max pooling
+
+使用预训练BERT和RoBERTa网络，并且只微调它来生成有用的句向量。这有效的减少了训练时间：SBERT微调小于20分钟，同时生成比同类句向量方法更好的向量。
+
+
+
+
+
+##### Sentence-BERT
+
+@@ 在语义相似度任务中（QQP、MRPC），对标了Sentence-BERT，结果还好
+
+https://arxiv.org/pdf/2005.11347v1.pdf
+
+
+
+
+
+
+
 #### 编码
 
 BBPE
