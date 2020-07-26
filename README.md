@@ -16,7 +16,11 @@
 
 
 
+#### 论文合集（TODO）
 
+##### 2012年到2016年的高引TOP 100  机器学习
+
+https://zhuanlan.zhihu.com/p/161460985
 
 
 
@@ -54,7 +58,7 @@ OHEM（online hard example mining），实现了在线学习的类别平衡方�
 
 
 
-##### Dice Loss for Data-imbalanced NLP Tasks
+##### Dice Loss 
 
 @@@       来自香侬科技的一篇，还未开源，网友怀疑效果，不过值得试一试
 
@@ -134,6 +138,30 @@ https://jalammar.github.io/illustrated-transformer/
 
 
 
+#### 模型：
+
+##### Longformer 
+
+@@@   https://arxiv.org/pdf/2004.05150.pdf
+
+1、slide window的self attention
+
+2、dilated slide window 
+
+3、global(cls token) + slide window
+
+测试 long document tasks ，WIkiHop、TriviaQA。
+
+测试character level language modeling ，数据集enwiki8、text8 
+
+（Language modeling is the task of predicting the next word or character in a document.https://nlpprogress.com/english/language_modeling.html）
+
+在roberta上继续预训练的
+
+
+
+
+
 #### bert在语义相似度搜索的应用：
 
 ##### Sentence-BERT
@@ -162,7 +190,7 @@ bert的句子输出向量三种方式：
 
 
 
-##### Sentence-BERT
+##### SentPWNet
 
 @@ 在语义相似度任务中（QQP、MRPC），对标了Sentence-BERT，结果还好
 
@@ -190,9 +218,9 @@ https://zhuanlan.zhihu.com/p/124215760
 
 #### 文本摘要
 
-##### PEGASUS: Pre-training with Extracted Gap-sentences for Abstractive Summarization
+##### PEGASUS
 
-@@
+@@ Pre-training with Extracted Gap-sentences for Abstractive Summarization
 
 *https://arxiv.org/pdf/1912.08777.pdf*
 
