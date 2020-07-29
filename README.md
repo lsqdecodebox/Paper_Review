@@ -138,6 +138,26 @@ https://jalammar.github.io/illustrated-transformer/
 
 
 
+##### The Next Generation of Neural Networks
+
+Hinton 著
+
+https://dl.acm.org/doi/10.1145/3397271.3402425
+
+他认为人工神经网络最重要的问题是想人类一样高效地使用无监督学习。
+
+当前无监督学习有两种方式：1、如同bert一样的变分自编码。图像方面则网络太深了，需要图像细节  2、训练两个网络...为了筛除无关的信息
+
+提出 Contrastive Loss
+
+详见视频
+
+ 
+
+
+
+
+
 #### 模型：
 
 ##### Longformer 
