@@ -128,42 +128,6 @@ https://arxiv.org/abs/2006.16236  Transformers are RNNs: Fast Autoregressive Tra
 
 苏介绍得好丰富详细呀，相关的reformer 、linformer
 
-![img](C:\Users\Administrator\AppData\Local\YNote\data\qq6E9B3325D6DD15459B92C31E96574474\a0ab18d7d346433ea7ea98598246b7ef\clipboard.png)
-
-
-
-
-
-##### The Next Generation of Neural Networks
-
-@@  Hinton 著
-
-https://dl.acm.org/doi/10.1145/3397271.3402425
-
-他认为人工神经网络最重要的问题是想人类一样高效地使用无监督学习。
-
-当前无监督学习有两种方式：1、如同bert一样的变分自编码。图像方面则网络太深了，需要处理图像细节，而非表征向量  2、训练两个网络...为了筛除无关的信息
-
-详见视频
-
- 过去20年，自编码器的困难：1、没有采用合适的神经元模型，relu比sigmoid或tanh更合适； 2、初始化权重没做好； 3、硬件算力不足
-
-无监督对比学习，提出 对比损失  Contrastive Loss；建模样本间的局部关系、增强数据间表达的一致性，最新实现SimCLR
-
-类似： Contrastive Loss https://zhuanlan.zhihu.com/p/116899404
-
-
-
-##### RL算法发现算法
-
-@  https://zhuanlan.zhihu.com/p/164518791
-
-学习策略梯度（LPG）
-
-
-
-#### 模型：
-
 
 
 ##### 博文：The Illustrated Transformer
@@ -173,6 +137,28 @@ https://dl.acm.org/doi/10.1145/3397271.3402425
 https://jalammar.github.io/illustrated-transformer/
 
 
+
+##### The Next Generation of Neural Networks
+
+Hinton 著
+
+https://dl.acm.org/doi/10.1145/3397271.3402425
+
+他认为人工神经网络最重要的问题是想人类一样高效地使用无监督学习。
+
+当前无监督学习有两种方式：1、如同bert一样的变分自编码。图像方面则网络太深了，需要图像细节  2、训练两个网络...为了筛除无关的信息
+
+提出 Contrastive Loss
+
+详见视频
+
+ 
+
+
+
+
+
+#### 模型：
 
 ##### Longformer 
 
@@ -193,20 +179,6 @@ https://jalammar.github.io/illustrated-transformer/
 在roberta上继续预训练的
 
 
-
-##### Big Bird
-
-@@@  random 2 + window 3 + global 2  解长序列问题，且证明了图灵完备性
-
-https://arxiv.org/abs/2007.14062
-
-在可计算性理论里，如果一系列操作数据的规则（如指令集、编程语言、细胞自动机）按照一定的顺序可以计算出结果，被称为图灵完备（turing complete） ；有能力执行条件跳转（if、while、goto语句）以及改变内存数据
-
-编程语言都是图灵完备的
-
-We show that BigBird is a universal approximator of sequence functions and is Turing complete, thereby preserving these properties of the quadratic, full attention model
-
-Pérez et al. [73] showed that the full transformer is Turing Complete (i.e. can simulate a full Turing machine)
 
 
 
